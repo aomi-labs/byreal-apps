@@ -11,7 +11,7 @@ crate-type = ["cdylib", "rlib"]
 [workspace]
 
 [dependencies]
-aomi-sdk = { path = "../../../aomi-sdk/sdk" }
+aomi-sdk = "=3.0.2"
 # Compose the position primitive: reuse byreal-lp's envelope decoder, its
 # `LpClient` position reads, and the open-position execute path
 # (`open_position_route`). Copy-trade adds only the Copy-Farming discovery

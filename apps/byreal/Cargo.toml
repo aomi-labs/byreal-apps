@@ -7,7 +7,7 @@ edition = "2024"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-aomi-sdk = { path = "../../../aomi-sdk/sdk" }
+aomi-sdk = "=3.0.2"
 hl_ranger = "=0.6.0-ranger.20"
 ethers = { version = "2.0", default-features = false }
 reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "blocking"] }
