@@ -1,0 +1,28 @@
+{
+  "user_story": "Find the top byreal Copy-Farming LP by risk-adjusted PnL, vet them, and inspect the exact position (pool + tick range) you'd mirror. Read-only discovery against api2.byreal.io — stop at inspecting the position; no mirror write, no wallet signature.",
+  "turns": [
+    {
+      "prompt": "Show me the top byreal copy-farming positions ranked by risk-adjusted PnL.",
+      "expected_tools": {
+        "must_call": ["byreal_copy_get_top_farmers"]
+      }
+    },
+    {
+      "prompt": "Take the top provider from that list and pull their aggregate stats — followers and cumulative earnings.",
+      "expected_tools": {
+        "must_call": ["byreal_copy_get_provider"]
+      }
+    },
+    {
+      "prompt": "Now show me that provider's full set of positions so I can see which pool and tick range I'd be copying. Don't open anything.",
+      "expected_tools": {
+        "must_call": ["byreal_copy_get_provider_positions"],
+        "must_not_call": ["byreal_copy_mirror_position"]
+      }
+    }
+  ],
+  "final_assertion": {
+    "no_errors": false,
+    "max_turns": 12
+  }
+}
