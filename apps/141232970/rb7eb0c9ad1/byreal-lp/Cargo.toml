@@ -1,0 +1,29 @@
+[package]
+name = "byreal-lp"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+# Standalone package (root workspace lists apps/* under `exclude`). The empty
+# table also stops cargo's upward workspace walk — without it, building from a
+# git worktree escapes the worktree and resolves against the main checkout's
+# workspace, where this path isn't excluded.
+[workspace]
+
+[dependencies]
+aomi-sdk = "=3.0.2"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "blocking"] }
+schemars = "1.0.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+base64 = "0.22"
+
+# The zap-in open-position tx must be co-signed by a freshly generated
+# position-NFT mint keypair (standard CLMM: the position is identified by an
+# NFT). The keypair is ephemeral — generated in-tool, signs once, discarded;
+# it never has residual authority. solana-sdk is only needed for that partial
+# sign + the VersionedTransaction round-trip (same dep shape as svm-transfer).
+solana-sdk = { version = "2.1", default-features = false, features = ["full"] }
+bincode = "1.3"

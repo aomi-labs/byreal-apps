@@ -1,0 +1,5 @@
+[app]
+name = "byreal-copy-trade"
+display_name = "byreal Copy Farming"
+platform = "byreal"
+public = true

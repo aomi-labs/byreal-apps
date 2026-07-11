@@ -1,0 +1,28 @@
+{
+  "user_story": "Find a high-APR byreal CLMM pool, inspect its tick spacing, and preview zapping 50 USDC into a fresh position around the current price. Read-only flow against api2.byreal.io — the quote preview is the last step; no write tools, no wallet signatures.",
+  "turns": [
+    {
+      "prompt": "What are the top byreal CLMM pools by 24h APR right now?",
+      "expected_tools": {
+        "must_call": ["byreal_clmm_get_pools"]
+      }
+    },
+    {
+      "prompt": "Take the top USDC pool from that list and show me its current price, tick spacing, and fee rate.",
+      "expected_tools": {
+        "must_call": ["byreal_clmm_get_pool"]
+      }
+    },
+    {
+      "prompt": "Preview zapping 50 USDC into that pool in a range of about 10 tick-spacings either side of the current tick. Just the quote — do not open anything.",
+      "expected_tools": {
+        "must_call": ["byreal_clmm_quote_zap_in"],
+        "must_not_call": ["byreal_clmm_open_position"]
+      }
+    }
+  ],
+  "final_assertion": {
+    "no_errors": false,
+    "max_turns": 12
+  }
+}

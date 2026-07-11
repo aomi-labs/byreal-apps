@@ -1,0 +1,243 @@
+{
+  "id": "dep_141232970_rb7eb0c9ad1_3bdf5312a613",
+  "status": "",
+  "sdk_version": "3.0.2",
+  "deployed_at": 1783732773,
+  "source": {
+    "installation_id": 141232970,
+    "repository_id": 1296936327,
+    "repository_link": "aomi-labs/byreal-apps",
+    "owner_repo_name": "aomi-labs/byreal-apps",
+    "ref": "3bdf5312a61368304e7a929546eea92955a01bd9",
+    "commit_hash": "3bdf5312a61368304e7a929546eea92955a01bd9",
+    "aomi_toml_paths": [
+      "apps/byreal/aomi.toml",
+      "apps/byreal-lp/aomi.toml",
+      "apps/byreal-copy-trade/aomi.toml",
+      "apps/byreal-strategies/aomi.toml"
+    ]
+  },
+  "platform": {
+    "platform": "byreal",
+    "repository": "aomi-labs/byreal-apps",
+    "deploy_branch": "publish",
+    "source_branch": "aomi-labs/byreal-apps/141232970/3bdf5312a613",
+    "commit_hash": null,
+    "pr_number": null,
+    "pr_url": null,
+    "ci_status": null,
+    "ci_url": null,
+    "apps": [
+      {
+        "name": "byreal",
+        "path": "apps/141232970/rb7eb0c9ad1/byreal",
+        "aomi_toml_path": "apps/byreal/aomi.toml",
+        "release_tag": "apps-141232970-rb7eb0c9ad1-byreal-3bdf5312a613",
+        "sdk_version": "3.0.2",
+        "target": "x86_64-unknown-linux-gnu",
+        "files": [
+          {
+            "path": "BYREAL_CLI_FLOWS.md",
+            "sha256": "sha256:7b942d73051b1a0cdbb8be46d3bc79b35673716aec67008f9724794e7fbe2f54",
+            "bytes": 8757
+          },
+          {
+            "path": "Cargo.toml",
+            "sha256": "sha256:92c82e2d803e869d7829e156e53f262f3063bf4f21e2c938168a6b112ed4fa26",
+            "bytes": 620
+          },
+          {
+            "path": "aomi.toml",
+            "sha256": "sha256:52e6bd62e94ccf7860296614fdf9aba7f7623122f1b975043b9bceb264daab2c",
+            "bytes": 80
+          },
+          {
+            "path": "src/client/lp.rs",
+            "sha256": "sha256:aed273dad63f9fcfec791ed15aca1e4423862fe6c97954aa9e058e11f385dacc",
+            "bytes": 6717
+          },
+          {
+            "path": "src/client/mod.rs",
+            "sha256": "sha256:02456761f779033266d054178d48619fc7b255cfdccb8d69a2a4ecc8e4095714",
+            "bytes": 10348
+          },
+          {
+            "path": "src/client/perps.rs",
+            "sha256": "sha256:220102127172aa4f3393d836e1d5ef1e01657fe2dd57a9d44bb3966ceeca8cc4",
+            "bytes": 18991
+          },
+          {
+            "path": "src/client/spot.rs",
+            "sha256": "sha256:ab54b1b6df069f2af8d3160395cf14401667100f0e06c573dddbe71a9b9565bd",
+            "bytes": 10219
+          },
+          {
+            "path": "src/lib.rs",
+            "sha256": "sha256:7e5e29093be35d3cf749b868ffb685a97e8ed0ff1f5130365f5a4470d14c77c0",
+            "bytes": 9036
+          },
+          {
+            "path": "src/testing.rs",
+            "sha256": "sha256:2cef1fcce6363c109a9f1298d6957df9bcee4df240687d0092f58a7fdc15fe45",
+            "bytes": 11310
+          },
+          {
+            "path": "src/tool/lp.rs",
+            "sha256": "sha256:d89d6cc83a18dff522342d1f3f1f5d857c1de4b92d2398b0052d3537698d186f",
+            "bytes": 12856
+          },
+          {
+            "path": "src/tool/mod.rs",
+            "sha256": "sha256:ae3d84b37ea0eb1e281f8e33aa086f9fcdb97ddc6835642b9c6cd430691050fa",
+            "bytes": 6210
+          },
+          {
+            "path": "src/tool/perps.rs",
+            "sha256": "sha256:f4c87aa399fa2837c2932e7bcd55f1903fcd3ead7debcc8e6aa3bda1f6fed439",
+            "bytes": 37492
+          },
+          {
+            "path": "src/tool/spot.rs",
+            "sha256": "sha256:920d64b475b729eec98bef4dc218fe12cb516439d8094d242db6ac5a5f303cc5",
+            "bytes": 24440
+          },
+          {
+            "path": "test.json",
+            "sha256": "sha256:1d317656ce2380d3831bd564efdd7c0dff0ec63893eae6bdb188f1239a9fa06d",
+            "bytes": 883
+          },
+          {
+            "path": "tests/byreal_solana_smoke.rs",
+            "sha256": "sha256:142d89aa733d8106cf4eaa6255c0dad47962087d3885b2f5ec3b775d4d9c8aa9",
+            "bytes": 3064
+          },
+          {
+            "path": "tests/smoke_order.rs",
+            "sha256": "sha256:7fbbbc11b35fd9053989e457cbcdcd0d10887308df59eb2414ecb523bcfe2cf2",
+            "bytes": 2648
+          }
+        ]
+      },
+      {
+        "name": "byreal-lp",
+        "path": "apps/141232970/rb7eb0c9ad1/byreal-lp",
+        "aomi_toml_path": "apps/byreal-lp/aomi.toml",
+        "release_tag": "apps-141232970-rb7eb0c9ad1-byreal-lp-3bdf5312a613",
+        "sdk_version": "3.0.2",
+        "target": "x86_64-unknown-linux-gnu",
+        "files": [
+          {
+            "path": "Cargo.toml",
+            "sha256": "sha256:b57af823b5b71088a9459fb3f8b5e7ce872dfa02dd68143a9d2e00e7c700a266",
+            "bytes": 1123
+          },
+          {
+            "path": "aomi.toml",
+            "sha256": "sha256:ff2e525c2221a2f659cded4434bff39dd8c41d670788e6c554dfee50e2b50a4b",
+            "bytes": 86
+          },
+          {
+            "path": "src/client.rs",
+            "sha256": "sha256:e3a1369a8b1e5ffc147c816a8838fe4aaead2e118e0524c96ff73f8282743dbf",
+            "bytes": 17508
+          },
+          {
+            "path": "src/lib.rs",
+            "sha256": "sha256:b667fb4e615bb2ace3626f21a58a7fbf7a0b6c48f4d44530d12e64458a8dfa92",
+            "bytes": 8556
+          },
+          {
+            "path": "src/tool.rs",
+            "sha256": "sha256:b66a778cd69f1affc6f08eb969a71313439ca02d22c211a5096b3aa863aaa144",
+            "bytes": 28556
+          },
+          {
+            "path": "test.json",
+            "sha256": "sha256:93ee6561c2bddd8cdef0850806f73bd523cc2a40400f098d3c527f7ec627dc5f",
+            "bytes": 1064
+          }
+        ]
+      },
+      {
+        "name": "byreal-copy-trade",
+        "path": "apps/141232970/rb7eb0c9ad1/byreal-copy-trade",
+        "aomi_toml_path": "apps/byreal-copy-trade/aomi.toml",
+        "release_tag": "apps-141232970-rb7eb0c9ad1-byreal-copy-trade-3bdf5312a613",
+        "sdk_version": "3.0.2",
+        "target": "x86_64-unknown-linux-gnu",
+        "files": [
+          {
+            "path": "Cargo.toml",
+            "sha256": "sha256:f3061bed611890eae9f3ae1bcce394ee353ac6d53c6d8486849bcd082829574b",
+            "bytes": 622
+          },
+          {
+            "path": "aomi.toml",
+            "sha256": "sha256:535ece2dd69f4032d4f7491d9a3c60937cc607042a4c8767c30a016a7e73b935",
+            "bytes": 104
+          },
+          {
+            "path": "src/client.rs",
+            "sha256": "sha256:6dda399a96ff70e04ca39fd07ecbecbbd6d522e31bae00dd082ed0e346d4e25d",
+            "bytes": 3322
+          },
+          {
+            "path": "src/lib.rs",
+            "sha256": "sha256:40387d0ac4a31a76953200a288db12ca03e2f70549a021284b38dbca97f5e4d5",
+            "bytes": 6218
+          },
+          {
+            "path": "src/lp.rs",
+            "sha256": "sha256:d87db1ae5679d103e33e7ca61e90ac78b63ec27dbd585d13061df74f2d7edb3d",
+            "bytes": 19247
+          },
+          {
+            "path": "src/tool.rs",
+            "sha256": "sha256:d70a9d7bb482ff3719a3bc6fd999579946a55396178bc0a45378f60ca18e9f57",
+            "bytes": 11376
+          },
+          {
+            "path": "test.json",
+            "sha256": "sha256:25251c5bbd369c6c0ca2d123aa137202c3ab2a760a8ff52215efef087f0795a2",
+            "bytes": 1089
+          }
+        ]
+      },
+      {
+        "name": "byreal-strategies",
+        "path": "apps/141232970/rb7eb0c9ad1/byreal-strategies",
+        "aomi_toml_path": "apps/byreal-strategies/aomi.toml",
+        "release_tag": "apps-141232970-rb7eb0c9ad1-byreal-strategies-3bdf5312a613",
+        "sdk_version": "3.0.2",
+        "target": "x86_64-unknown-linux-gnu",
+        "files": [
+          {
+            "path": "Cargo.toml",
+            "sha256": "sha256:1f6dc0c3c6ca8f5cd6422e7b3d82e0814ecbdbc345d0f253dcde8e0fe714de05",
+            "bytes": 313
+          },
+          {
+            "path": "aomi.toml",
+            "sha256": "sha256:e28619e3004c7947c1dd0ab858ad86a2b66cc3168a652e0d7d9bfa042fc3ac3e",
+            "bytes": 102
+          },
+          {
+            "path": "src/client.rs",
+            "sha256": "sha256:55e8fc8548f3f3b314c00fe2a73ab817557036adf1eab5d1cd0859c52b70d550",
+            "bytes": 211
+          },
+          {
+            "path": "src/lib.rs",
+            "sha256": "sha256:25c30757fc8dc18ad974ab065ecdcc9975a9a3d70b231f7a396893c2affc0b46",
+            "bytes": 4174
+          },
+          {
+            "path": "src/tool.rs",
+            "sha256": "sha256:2cba32f01381064848d877d4be49ae28e8959d694ed0678061d4bac28d3f3a66",
+            "bytes": 19433
+          }
+        ]
+      }
+    ]
+  }
+}
