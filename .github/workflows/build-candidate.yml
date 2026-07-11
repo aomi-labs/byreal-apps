@@ -1,0 +1,61 @@
+name: Build Candidate App Release
+
+on:
+  push:
+    branches:
+      - "*/*/*/*"
+    paths:
+      - "apps/**"
+      - ".github/scripts/build_candidate.py"
+      - ".github/workflows/build-candidate.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: candidate-release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build candidate release
+    if: github.actor == 'aomi-build[bot]' || github.actor == 'aomi-build-staging[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch publish baseline
+        run: git fetch origin publish:refs/remotes/origin/publish
+
+      - name: Detect candidate apps
+        id: detect
+        run: |
+          python3 .github/scripts/build_candidate.py detect \
+            --base origin/publish \
+            --head "${{ github.sha }}" \
+            --github-output "$GITHUB_OUTPUT"
+
+      - name: Install Rust
+        if: steps.detect.outputs.apps != '[]'
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: "1.91"
+          targets: x86_64-unknown-linux-gnu
+
+      - uses: Swatinem/rust-cache@v2
+        if: steps.detect.outputs.apps != '[]'
+        with:
+          key: candidate-${{ github.ref_name }}-x86_64-unknown-linux-gnu
+
+      - name: Build and publish candidate releases
+        if: steps.detect.outputs.apps != '[]'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 .github/scripts/build_candidate.py release \
+            --base origin/publish \
+            --head "${{ github.sha }}" \
+            --target x86_64-unknown-linux-gnu \
+            --dist-dir dist
