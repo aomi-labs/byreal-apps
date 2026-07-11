@@ -20,7 +20,7 @@ use serde_json::{Value, json};
 use std::sync::OnceLock;
 use std::time::Duration;
 
-use byreal_lp::client::{BYREAL_API_BASE, byreal_get, byreal_post};
+use crate::lp::{BYREAL_API_BASE, byreal_get, byreal_post};
 
 #[derive(Clone, Default)]
 pub struct ByrealCopyTradeApp;

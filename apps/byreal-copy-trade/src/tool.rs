@@ -15,8 +15,7 @@ use aomi_sdk::schemars::JsonSchema;
 use aomi_sdk::*;
 
 use crate::client::{ByrealCopyTradeApp, copy_client};
-use byreal_lp::client::lp_client;
-use byreal_lp::tool::open_position_route;
+use crate::lp::{lp_client, open_position_route};
 
 const DEFAULT_SLIPPAGE_BPS: u16 = 100;
 const DEFAULT_PAGE_SIZE: u32 = 10;

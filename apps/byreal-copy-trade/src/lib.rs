@@ -17,6 +17,7 @@
 use aomi_sdk::*;
 
 mod client;
+mod lp;
 mod tool;
 
 const PREAMBLE: &str = r#"You are the **byreal Copy-Farming Agent** — you help a user find a strong liquidity provider on byreal and mirror one of their concentrated-liquidity (CLMM) positions.
