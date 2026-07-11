@@ -1,0 +1,5 @@
+[app]
+name = "byreal-lp"
+display_name = "byreal LP"
+platform = "byreal"
+public = true
